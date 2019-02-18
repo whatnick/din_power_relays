@@ -21,7 +21,10 @@
 - x3 Voltage divider ladders with 880K + 1K total serial resistance
 
 ## AC current Sampler
-- x8 2.4ohm current sense resistor based CT clamp inputs
+- x4 2.4ohm current sense resistor based CT clamp inputs
+
+## Relay Driver
+- x4 optoisolated relay driver connectors, external power required to operate relays.
 
 ## Connectors
 - 5.08mm spacing phoenix contact AC voltage connector
