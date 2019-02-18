@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name whatnick)(type Legacy)(uri ${KIPRJMOD}/whatnick.lib)(options "")(descr ""))
+  (lib (name dc-dc1)(type Legacy)(uri ${KIPRJMOD}/dc-dc.lib)(options "")(descr ""))
+)
