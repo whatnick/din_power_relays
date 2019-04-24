@@ -659,8 +659,6 @@ Wire Wire Line
 Wire Wire Line
 	5100 1400 4700 1400
 Wire Wire Line
-	5195 2700 5045 2700
-Wire Wire Line
 	4700 1400 4700 1550
 Wire Wire Line
 	4900 1550 5100 1550
@@ -804,29 +802,29 @@ IN1+
 Text GLabel 10050 1550 3    60   Input ~ 0
 IN1-
 Text GLabel 8200 1550 3    60   Input ~ 0
-IA2+
+RE1_H
 Text GLabel 8300 1550 3    60   Input ~ 0
-IA2-
+RE1_L
 Text GLabel 8400 1550 3    60   Input ~ 0
-IB2+
+RE2_H
 Text GLabel 8500 1550 3    60   Input ~ 0
-IB2-
+RE2_L
 Text GLabel 8600 1550 3    60   Input ~ 0
-IC2+
+RE3_H
 Text GLabel 8700 1550 3    60   Input ~ 0
-IC2-
+RE3_L
 Text GLabel 8800 1550 3    60   Input ~ 0
-IN2+
+RE4_H
 Text GLabel 8900 1550 3    60   Input ~ 0
-IN2-
+RE4_L
 Text Notes 4650 7650 0    60   ~ 0
-Power Systems - Battery and 3.3V
+Power Systems - dual 3.3v LDO
 $Comp
 L Regulator_Linear:L78L05_SOT89 U3
 U 1 1 59F7360D
 P 5550 4050
 F 0 "U3" H 5550 4292 50  0000 C CNN
-F 1 "AP7365-33YG-13" H 5550 4201 50  0000 C CNN
+F 1 "L78L05_SOT89" H 5550 4201 50  0000 C CNN
 F 2 "TO_SOT_Packages_SMD:SOT-89-3" H 5550 4050 50  0001 C CNN
 F 3 "" H 5550 4050 50  0001 C CNN
 F 4 "AP7365-33YG-13" H 5550 4050 60  0001 C CNN "manf#"
@@ -838,7 +836,7 @@ L Regulator_Linear:L78L33_SOT89 U2
 U 1 1 59F7360E
 P 5500 5000
 F 0 "U2" H 5500 5242 50  0000 C CNN
-F 1 "AP7365-33YG-13" H 5500 5151 50  0000 C CNN
+F 1 "L78L33_SOT89" H 5500 5151 50  0000 C CNN
 F 2 "TO_SOT_Packages_SMD:SOT-89-3" H 5500 5000 50  0001 C CNN
 F 3 "" H 5500 5000 50  0001 C CNN
 F 4 "AP7365-33YG-13" H 5500 5000 60  0001 C CNN "manf#"
@@ -891,52 +889,6 @@ F 3 "" H 5900 5200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L battery_management:MCP73831-2-OT U1
-U 1 1 59F73613
-P 5350 6450
-F 0 "U1" H 5350 6928 50  0000 C CNN
-F 1 "MCP73831-2-OT" H 5350 6837 50  0000 C CNN
-F 2 "TO_SOT_Packages_SMD:SOT-23-5" H 5400 6200 50  0001 L CIN
-F 3 "" H 5200 6400 50  0001 C CNN
-F 4 "MCP73831T-3ACI/OT" H 5350 6450 60  0001 C CNN "manf#"
-	1    5350 6450
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x02 J2
-U 1 1 59F73614
-P 6200 5700
-F 0 "J2" V 6165 5562 50  0000 R CNN
-F 1 "VBAT" V 6074 5562 50  0000 R CNN
-F 2 "Connectors_JST:JST_SH_BM02B-SRSS-TB_02x1.00mm_Straight" H 6200 5700 50  0001 C CNN
-F 3 "" H 6200 5700 50  0001 C CNN
-F 4 "BM02B-SRSS-TB(LFSN)" H 6200 5700 60  0001 C CNN "manf#"
-	1    6200 5700
-	0    -1   -1   0   
-$EndComp
-$Comp
-L device:C C4
-U 1 1 59F73615
-P 4650 6400
-F 0 "C4" H 4765 6446 50  0000 L CNN
-F 1 "1uF" H 4765 6355 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 4688 6250 50  0001 C CNN
-F 3 "" H 4650 6400 50  0001 C CNN
-	1    4650 6400
-	1    0    0    -1  
-$EndComp
-$Comp
-L device:C C9
-U 1 1 59F73616
-P 6050 6350
-F 0 "C9" V 5798 6350 50  0000 C CNN
-F 1 "1uF" V 5889 6350 50  0000 C CNN
-F 2 "Capacitors_SMD:C_0603" H 6088 6200 50  0001 C CNN
-F 3 "" H 6050 6350 50  0001 C CNN
-	1    6050 6350
-	0    1    1    0   
-$EndComp
-$Comp
 L power:GNDPWR #PWR012
 U 1 1 59F73617
 P 5500 5450
@@ -947,111 +899,6 @@ F 3 "" H 5500 5400 50  0001 C CNN
 	1    5500 5450
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:GNDPWR #PWR013
-U 1 1 59F73618
-P 5350 7050
-F 0 "#PWR013" H 5350 6850 50  0001 C CNN
-F 1 "GNDPWR" H 5354 7124 50  0000 C CNN
-F 2 "" H 5350 7000 50  0001 C CNN
-F 3 "" H 5350 7000 50  0001 C CNN
-	1    5350 7050
-	1    0    0    -1  
-$EndComp
-$Comp
-L device:R R32
-U 1 1 59F73619
-P 4800 6750
-F 0 "R32" H 4870 6796 50  0000 L CNN
-F 1 "2K" H 4870 6705 50  0000 L CNN
-F 2 "Resistors_SMD:R_0603" V 4730 6750 50  0001 C CNN
-F 3 "" H 4800 6750 50  0001 C CNN
-F 4 "RT0603DRE072KL" H 4800 6750 60  0001 C CNN "manf#"
-	1    4800 6750
-	1    0    0    -1  
-$EndComp
-$Comp
-L device:R R33
-U 1 1 59F7361A
-P 6000 6550
-F 0 "R33" V 5900 6450 50  0000 C CNN
-F 1 "1K" V 6100 6550 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603" V 5930 6550 50  0001 C CNN
-F 3 "" H 6000 6550 50  0001 C CNN
-	1    6000 6550
-	0    1    1    0   
-$EndComp
-$Comp
-L device:LED D2
-U 1 1 59F7361B
-P 6450 6550
-F 0 "D2" H 6441 6766 50  0000 C CNN
-F 1 "LED" H 6441 6675 50  0000 C CNN
-F 2 "LEDs:LED_0603" H 6450 6550 50  0001 C CNN
-F 3 "" H 6450 6550 50  0001 C CNN
-F 4 "LTST-C190KRKT" H 6450 6550 60  0001 C CNN "manf#"
-	1    6450 6550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4300 6100 4650 6100
-Wire Wire Line
-	4650 6100 4650 6250
-Wire Wire Line
-	5350 6100 5350 6150
-Connection ~ 4650 6100
-Wire Wire Line
-	4650 6550 4650 7050
-Wire Wire Line
-	4650 7050 4800 7050
-Wire Wire Line
-	5350 7050 5350 6750
-Wire Wire Line
-	4800 6600 4800 6550
-Wire Wire Line
-	4800 6550 4950 6550
-Wire Wire Line
-	4800 6900 4800 7050
-Connection ~ 4800 7050
-Wire Wire Line
-	5750 6550 5850 6550
-Wire Wire Line
-	6300 6550 6150 6550
-Wire Wire Line
-	6600 6100 6600 6550
-Connection ~ 5350 6100
-Wire Wire Line
-	5750 6350 5850 6350
-Wire Wire Line
-	5850 6350 5850 5900
-Wire Wire Line
-	5650 5900 5850 5900
-Connection ~ 5850 6350
-Wire Wire Line
-	6200 6350 6250 6350
-Wire Wire Line
-	6250 7050 6250 6350
-Connection ~ 5350 7050
-Connection ~ 6250 6350
-$Comp
-L device:D_Schottky D1
-U 1 1 59F7361C
-P 5500 5900
-F 0 "D1" H 5500 6116 50  0000 C CNN
-F 1 "D_Schottky" H 5500 6025 50  0000 C CNN
-F 2 "Diodes_SMD:D_SOD-323F" H 5500 5900 50  0001 C CNN
-F 3 "" H 5500 5900 50  0001 C CNN
-F 4 "PMEG1020EA" H 5500 5900 60  0001 C CNN "manf#"
-	1    5500 5900
-	1    0    0    -1  
-$EndComp
-Connection ~ 5850 5900
-Wire Wire Line
-	5350 5900 4750 5900
-Wire Wire Line
-	4750 5000 4750 5900
-Wire Wire Line
-	4750 5000 5100 5000
 Wire Wire Line
 	5100 5050 5100 5000
 Connection ~ 5100 5000
@@ -1080,17 +927,15 @@ F 3 "" H 6300 5000 50  0001 C CNN
 	1    6300 5000
 	1    0    0    -1  
 $EndComp
-Connection ~ 4750 5900
-Connection ~ 4750 6100
 $Comp
 L power:+5V #PWR015
 U 1 1 59F7361E
-P 4300 6100
-F 0 "#PWR015" H 4300 5950 50  0001 C CNN
-F 1 "+5V" H 4315 6273 50  0000 C CNN
-F 2 "" H 4300 6100 50  0001 C CNN
-F 3 "" H 4300 6100 50  0001 C CNN
-	1    4300 6100
+P 4750 5000
+F 0 "#PWR015" H 4750 4850 50  0001 C CNN
+F 1 "+5V" H 4765 5173 50  0000 C CNN
+F 2 "" H 4750 5000 50  0001 C CNN
+F 3 "" H 4750 5000 50  0001 C CNN
+	1    4750 5000
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1135,8 +980,6 @@ Text GLabel 8300 5450 3    60   Input ~ 0
 +5V
 Text GLabel 8400 5450 3    60   Input ~ 0
 +3V3
-Text GLabel 6000 5900 1    60   Input ~ 0
-VBAT
 Text GLabel 8500 5450 3    60   Input ~ 0
 VBAT
 Text Label 5145 2700 3    60   ~ 0
@@ -1171,8 +1014,6 @@ F 4 "1" V 8250 2600 60  0001 C CNN "DNP"
 	1    8250 2600
 	1    0    0    -1  
 $EndComp
-Text GLabel 5700 7050 3    60   Input ~ 0
-GNDPWR
 Text GLabel 6000 2400 2    60   Input ~ 0
 +5V
 Text GLabel 6250 5000 3    60   Input ~ 0
@@ -1224,29 +1065,11 @@ Wire Wire Line
 Wire Wire Line
 	1080 5745 1080 5695
 Wire Wire Line
-	4650 6100 4750 6100
-Wire Wire Line
-	4800 7050 5350 7050
-Wire Wire Line
-	5350 6100 6600 6100
-Wire Wire Line
-	5850 6350 5900 6350
-Wire Wire Line
-	5350 7050 6250 7050
-Wire Wire Line
-	6250 6350 6250 5900
-Wire Wire Line
-	5850 5900 6150 5900
-Wire Wire Line
 	5100 5000 5200 5000
 Wire Wire Line
 	5500 5450 5900 5450
 Wire Wire Line
 	5900 5000 6300 5000
-Wire Wire Line
-	4750 5900 4750 6100
-Wire Wire Line
-	4750 6100 5350 6100
 Wire Wire Line
 	5100 4050 5250 4050
 Wire Wire Line
@@ -2591,50 +2414,136 @@ F 4 "50:$2.74" H 5600 2600 60  0001 C CNN "kicost:pricing"
 	1    0    0    -1  
 $EndComp
 Connection ~ 5200 2500
-Entry Wire Line
-	5780 4755 5880 4855
+Wire Wire Line
+	5040 2700 5045 2700
+Connection ~ 5045 2700
+Wire Wire Line
+	5045 2700 5200 2700
+Wire Wire Line
+	4750 5000 5100 5000
 $Comp
-L Isolator:ILQ74 U6
-U 4 1 5C7AA889
-P 3070 4580
-F 0 "U6" H 3070 4905 50  0000 C CNN
-F 1 "ILQ74" H 3070 4814 50  0000 C CNN
-F 2 "" H 2870 4380 50  0001 L CIN
-F 3 "https://www.vishay.com/docs/83640/ild74.pdf" H 3070 4580 50  0001 L CNN
-	4    3070 4580
+L Isolator:LTV-356T U1
+U 1 1 5CC2077B
+P 3090 4355
+F 0 "U1" H 3090 4680 50  0000 C CNN
+F 1 "LTV-356T" H 3090 4589 50  0000 C CNN
+F 2 "Package_SO:SO-4_4.4x3.6mm_P2.54mm" H 2890 4155 50  0001 L CIN
+F 3 "http://optoelectronics.liteon.com/upload/download/DS70-2001-010/S_110_LTV-356T%2020140520.pdf" H 3090 4355 50  0001 L CNN
+	1    3090 4355
 	1    0    0    -1  
 $EndComp
 $Comp
-L Isolator:ILQ74 U6
-U 3 1 5C7AA965
-P 3050 5140
-F 0 "U6" H 3050 5465 50  0000 C CNN
-F 1 "ILQ74" H 3050 5374 50  0000 C CNN
-F 2 "" H 2850 4940 50  0001 L CIN
-F 3 "https://www.vishay.com/docs/83640/ild74.pdf" H 3050 5140 50  0001 L CNN
-	3    3050 5140
+L Isolator:LTV-356T U6
+U 1 1 5CC20807
+P 3090 4975
+F 0 "U6" H 3090 5300 50  0000 C CNN
+F 1 "LTV-356T" H 3090 5209 50  0000 C CNN
+F 2 "Package_SO:SO-4_4.4x3.6mm_P2.54mm" H 2890 4775 50  0001 L CIN
+F 3 "http://optoelectronics.liteon.com/upload/download/DS70-2001-010/S_110_LTV-356T%2020140520.pdf" H 3090 4975 50  0001 L CNN
+	1    3090 4975
 	1    0    0    -1  
 $EndComp
 $Comp
-L Isolator:ILQ74 U6
-U 2 1 5C7AAA03
-P 3040 5775
-F 0 "U6" H 3040 6100 50  0000 C CNN
-F 1 "ILQ74" H 3040 6009 50  0000 C CNN
-F 2 "" H 2840 5575 50  0001 L CIN
-F 3 "https://www.vishay.com/docs/83640/ild74.pdf" H 3040 5775 50  0001 L CNN
-	2    3040 5775
+L Isolator:LTV-356T U7
+U 1 1 5CC20887
+P 3090 5570
+F 0 "U7" H 3090 5895 50  0000 C CNN
+F 1 "LTV-356T" H 3090 5804 50  0000 C CNN
+F 2 "Package_SO:SO-4_4.4x3.6mm_P2.54mm" H 2890 5370 50  0001 L CIN
+F 3 "http://optoelectronics.liteon.com/upload/download/DS70-2001-010/S_110_LTV-356T%2020140520.pdf" H 3090 5570 50  0001 L CNN
+	1    3090 5570
 	1    0    0    -1  
 $EndComp
 $Comp
-L Isolator:ILQ74 U6
-U 1 1 5C7AAAC3
-P 3010 6250
-F 0 "U6" H 3010 6575 50  0000 C CNN
-F 1 "ILQ74" H 3010 6484 50  0000 C CNN
-F 2 "" H 2810 6050 50  0001 L CIN
-F 3 "https://www.vishay.com/docs/83640/ild74.pdf" H 3010 6250 50  0001 L CNN
-	1    3010 6250
+L Isolator:LTV-356T U8
+U 1 1 5CC20905
+P 3090 6165
+F 0 "U8" H 3090 6490 50  0000 C CNN
+F 1 "LTV-356T" H 3090 6399 50  0000 C CNN
+F 2 "Package_SO:SO-4_4.4x3.6mm_P2.54mm" H 2890 5965 50  0001 L CIN
+F 3 "http://optoelectronics.liteon.com/upload/download/DS70-2001-010/S_110_LTV-356T%2020140520.pdf" H 3090 6165 50  0001 L CNN
+	1    3090 6165
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector_Generic:Conn_01x04 J2
+U 1 1 5CC20DA6
+P 3605 6900
+F 0 "J2" H 3685 6892 50  0000 L CNN
+F 1 "Conn_01x04" H 3685 6801 50  0000 L CNN
+F 2 "Connector_JST:JST_SH_BM04B-SRSS-TB_1x04-1MP_P1.00mm_Vertical" H 3605 6900 50  0001 C CNN
+F 3 "~" H 3605 6900 50  0001 C CNN
+	1    3605 6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:R R18
+U 1 1 5CC21BE0
+P 2775 6920
+F 0 "R18" H 2845 6966 50  0000 L CNN
+F 1 "R" H 2845 6875 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2705 6920 50  0001 C CNN
+F 3 "~" H 2775 6920 50  0001 C CNN
+	1    2775 6920
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDPWR #PWR013
+U 1 1 5CC23560
+P 2775 7165
+F 0 "#PWR013" H 2775 6965 50  0001 C CNN
+F 1 "GNDPWR" H 2779 7239 50  0000 C CNN
+F 2 "" H 2775 7115 50  0001 C CNN
+F 3 "" H 2775 7115 50  0001 C CNN
+	1    2775 7165
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2775 7070 2775 7165
+Wire Wire Line
+	2775 6770 2775 6725
+Wire Wire Line
+	2775 6725 2730 6725
+Text GLabel 2730 6725 1    50   Input ~ 0
+LED_L
+Text GLabel 2790 6265 0    50   Output ~ 0
+LED_L
+Text GLabel 2790 5670 0    50   Output ~ 0
+LED_L
+Text GLabel 2790 5075 0    50   Output ~ 0
+LED_L
+Text GLabel 2790 4455 0    50   Output ~ 0
+LED_L
+Text GLabel 3405 6800 0    50   Output ~ 0
+LED_H1
+Text GLabel 3405 6900 0    50   Output ~ 0
+LED_H2
+Text GLabel 3405 7000 0    50   Output ~ 0
+LED_H3
+Text GLabel 3405 7100 0    50   Output ~ 0
+LED_H4
+Text GLabel 2790 4255 0    50   Input ~ 0
+LED_H1
+Text GLabel 2790 4875 0    50   Input ~ 0
+LED_H2
+Text GLabel 2790 5470 0    50   Input ~ 0
+LED_H3
+Text GLabel 2790 6065 0    50   Input ~ 0
+LED_H4
+Text GLabel 3390 4255 2    50   Input ~ 0
+RE1_H
+Text GLabel 3390 4455 2    50   Output ~ 0
+RE1_L
+Text GLabel 3390 4875 2    50   Input ~ 0
+RE2_H
+Text GLabel 3390 5075 2    50   Output ~ 0
+RE2_L
+Text GLabel 3390 5670 2    50   Output ~ 0
+RE3_L
+Text GLabel 3390 5470 2    50   Input ~ 0
+RE3_H
+Text GLabel 3390 6265 2    50   Output ~ 0
+RE4_L
+Text GLabel 3390 6065 2    50   Input ~ 0
+RE4_H
 $EndSCHEMATC
