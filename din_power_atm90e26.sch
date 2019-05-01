@@ -2429,6 +2429,7 @@ F 0 "U1" H 3090 4680 50  0000 C CNN
 F 1 "LTV-356T" H 3090 4589 50  0000 C CNN
 F 2 "Package_SO:SO-4_4.4x3.6mm_P2.54mm" H 2890 4155 50  0001 L CIN
 F 3 "http://optoelectronics.liteon.com/upload/download/DS70-2001-010/S_110_LTV-356T%2020140520.pdf" H 3090 4355 50  0001 L CNN
+F 4 "LTV-356T" H 3090 4355 50  0001 C CNN "manf#"
 	1    3090 4355
 	1    0    0    -1  
 $EndComp
@@ -2440,6 +2441,7 @@ F 0 "U6" H 3090 5300 50  0000 C CNN
 F 1 "LTV-356T" H 3090 5209 50  0000 C CNN
 F 2 "Package_SO:SO-4_4.4x3.6mm_P2.54mm" H 2890 4775 50  0001 L CIN
 F 3 "http://optoelectronics.liteon.com/upload/download/DS70-2001-010/S_110_LTV-356T%2020140520.pdf" H 3090 4975 50  0001 L CNN
+F 4 "LTV-356T" H 3090 4975 50  0001 C CNN "manf#"
 	1    3090 4975
 	1    0    0    -1  
 $EndComp
@@ -2451,6 +2453,7 @@ F 0 "U7" H 3090 5895 50  0000 C CNN
 F 1 "LTV-356T" H 3090 5804 50  0000 C CNN
 F 2 "Package_SO:SO-4_4.4x3.6mm_P2.54mm" H 2890 5370 50  0001 L CIN
 F 3 "http://optoelectronics.liteon.com/upload/download/DS70-2001-010/S_110_LTV-356T%2020140520.pdf" H 3090 5570 50  0001 L CNN
+F 4 "LTV-356T" H 3090 5570 50  0001 C CNN "manf#"
 	1    3090 5570
 	1    0    0    -1  
 $EndComp
@@ -2462,6 +2465,7 @@ F 0 "U8" H 3090 6490 50  0000 C CNN
 F 1 "LTV-356T" H 3090 6399 50  0000 C CNN
 F 2 "Package_SO:SO-4_4.4x3.6mm_P2.54mm" H 2890 5965 50  0001 L CIN
 F 3 "http://optoelectronics.liteon.com/upload/download/DS70-2001-010/S_110_LTV-356T%2020140520.pdf" H 3090 6165 50  0001 L CNN
+F 4 "LTV-356T" H 3090 6165 50  0001 C CNN "manf#"
 	1    3090 6165
 	1    0    0    -1  
 $EndComp
@@ -2546,4 +2550,6 @@ Text GLabel 3390 6265 2    50   Output ~ 0
 RE4_L
 Text GLabel 3390 6065 2    50   Input ~ 0
 RE4_H
+Text GLabel 5900 5450 3    60   Output ~ 0
+GNDPWR
 $EndSCHEMATC
