@@ -63,8 +63,8 @@
     (pcbplotparams
       (layerselection 0x010fc_ffffffff)
       (usegerberextensions true)
-      (usegerberattributes true)
-      (usegerberadvancedattributes true)
+      (usegerberattributes false)
+      (usegerberadvancedattributes false)
       (creategerberjobfile true)
       (excludeedgelayer true)
       (linewidth 0.100000)
